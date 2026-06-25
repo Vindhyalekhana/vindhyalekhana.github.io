@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vindhya Lekhana — Personal Portfolio</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link rel="icon" type="image/jpeg" href="icon.jpeg">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="icon.jpeg" alt="V" class="logo-icon-img" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+            <span class="logo-text">Vindhya Lekhana</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="work.html">Projects</a>
+            <a href="services.html">Services</a>
+            <div class="dropdown">
+                <a href="#" style="cursor: default;">More <i class="fa-solid fa-chevron-down" style="font-size: 12px; margin-left: 4px;"></i></a>
+                <div class="dropdown-content">
+                    <a href="resume.html">Resume</a>
+                    <a href="skills.html">Skills & Certificates</a>
+                    <a href="awards.html">Awards</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+        </nav>
+        <div class="nav-cta">
+            <a href="#contact" class="btn btn-primary">Let's Work Together <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text" style="text-align: left;">
+                    <p class="greeting">Hey, I'm Vindhya Lekhana.</p>
+                    <h1 style="font-size: clamp(28px, 4vw, 48px);">Building Scalable Software<br>Solutions for the Modern World</h1>
+                    <p style="max-width: 600px; margin-bottom: 40px; font-size: 18px; color: var(--text-dark);">Full Stack Developer specializing in Web Applications, System Design, AI Solutions, and Enterprise Software Development.</p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="#works" class="btn btn-dark">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-primary bg-white" style="background: white;">Contact Me</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <div class="hero-shape">
+                        <img src="icon.jpeg" alt="Vindhya Lekhana Portrait">
+                    </div>
+                    <!-- Floating Elements -->
+                    <div class="floating-tag tag-left">Full Stack Dev</div>
+                    <div class="floating-tag tag-right">Software Eng</div>
+                    <div class="stats-card">
+                        <div class="stats-text">
+                            <span class="stats-title">Years Experience</span>
+                            <span class="stats-subtitle">Learning & Dev</span>
+                        </div>
+                        <span class="stats-number">2+</span>
+                    </div>
+                    <div class="stats-card stats-card-bottom blur-card">
+                        <div class="stats-text">
+                            <span class="stats-title">Academic & Personal</span>
+                            <span class="stats-subtitle">Projects Completed</span>
+                        </div>
+                        <span class="stats-number">15+</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-container">
+                <div class="about-left">
+                    <div class="section-badge"><i class="fa-solid fa-user"></i> About Me</div>
+                    <img src="icon.jpeg" alt="Vindhya - About Me" class="about-image">
+                </div>
+                <div class="about-right">
+                    <h2>I am a passionate Full Stack Developer focused on creating modern web applications, automation systems, and data-driven solutions.</h2>
+                    <p style="margin-bottom: 32px; color: var(--text-muted);">My interests include software engineering, cybersecurity, AI-powered systems, and building products that solve real-world problems.</p>
+                    <a href="#contact" class="btn btn-dark">Download Resume <i class="fa-solid fa-download"></i></a>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-info">
+                                <span class="stat-label">Technologies Worked With</span>
+                                <span class="stat-sub">Tech Stack & Tools</span>
+                            </div>
+                            <span class="stat-val">20+</span>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-info">
+                                <span class="stat-label">GitHub Contributions</span>
+                                <span class="stat-sub">Code Commits</span>
+                            </div>
+                            <span class="stat-val">500+</span>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-info">
+                                <span class="stat-val-big">100%</span>
+                                <span class="stat-sub">Project Completion Rate</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fa-solid fa-star text-yellow"></i> 5.0
+                            </div>
+                        </div>
+                        <div class="stat-box no-bg">
+                            <h3>Scalable Architecture,<br>Clean Code</h3>
+                            <div class="tags">
+                                <span class="tag">System Design</span>
+                                <span class="tag">AI Solutions</span>
+                                <span class="tag tag-vertical">Full Stack</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Projects Section -->
+        <section id="works" class="projects">
+            <div class="section-header center">
+                <div class="section-badge"><i class="fa-solid fa-folder-open"></i> Portfolio Projects</div>
+                <h2>Projects That Delivered<br>Real Impact</h2>
+            </div>
+            
+            <div id="github-projects-container" class="projects-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto;">
+            </div>
+        </section>
+
+
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="section-header">
+                <div class="section-badge"><i class="fa-solid fa-comment"></i> Client Feedback</div>
+                <h2>Trusted by ambitious<br>teams & founders</h2>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-content" style="width: 100%;">
+                    <span class="pill">Testimonials</span>
+                    <div class="quote-slider">
+                        <div class="quote-nav">
+                            <span class="dot active" data-index="0">1</span>
+                            <span class="dot" data-index="1">2</span>
+                            <span class="dot" data-index="2">3</span>
+                        </div>
+                        <div class="quote-text" id="quote-display">
+                            <p>"Vindhya consistently delivered high-quality solutions and demonstrated exceptional problem-solving skills."</p>
+                            <div class="author">
+                                <strong>Rahul Sharma</strong>
+                                <span>Founder, EduTech Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="control-btn" id="prev-quote"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="control-btn" id="next-quote"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta">
+            <div class="cta-content">
+                <h2>Have a project in mind?<br>Let's turn ideas into reality.</h2>
+                <a href="mailto:vindhyalekhana@gmail.com" class="btn btn-white">Email Me: vindhyalekhana@gmail.com <i class="fa-solid fa-envelope"></i></a>
+                
+                <div class="cta-links">
+                    <a href="https://github.com/yourusername" target="_blank" class="cta-link-card">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="cta-link-card">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://instagram.com/soul.scripted.22" target="_blank" class="cta-link-card">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="icon.jpeg" alt="V" class="logo-icon-img" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                    <span class="logo-text" style="color: var(--white);">Vindhya Lekhana</span>
+                </div>
+                <p>Building scalable web applications, modern user experiences, and real-world software solutions.</p>
+                <div class="social-links" style="justify-content: flex-start; gap: 16px;">
+                    <a href="https://github.com/Vindhyalekhana" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/soul.scripted.22" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Me</a>
+                    <a href="work.html">Projects</a>
+                    <a href="services.html">Services</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="resume.html">Resume</a>
+                    <a href="skills.html">Skills & Certs</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:hello@example.com">hello@example.com</a>
+                    <a href="index.html#contact">Book a Call</a>
+                    <a href="index.html#contact">Send a Message</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vindhya Lekhana. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="github.js"></script>
+    <script>
+        // Inline script for testimonials
+        const testimonials = [
+            {
+                quote: "Vindhya consistently delivered high-quality solutions and demonstrated exceptional problem-solving skills.",
+                name: "Rahul Sharma",
+                role: "Founder, EduTech Solutions"
+            },
+            {
+                quote: "The attention to detail and technical expertise made our project successful.",
+                name: "Priya Verma",
+                role: "Product Manager"
+            },
+            {
+                quote: "Excellent developer with strong architecture and implementation capabilities.",
+                name: "Arjun Rao",
+                role: "Startup Founder"
+            }
+        ];
+        
+        let currentQuote = 0;
+        const quoteDisplay = document.getElementById('quote-display');
+        const dotsNav = document.querySelectorAll('.dot');
+        
+        function updateQuote(index) {
+            currentQuote = index;
+            const t = testimonials[index];
+            quoteDisplay.innerHTML = `
+                <p>"${t.quote}"</p>
+                <div class="author">
+                    <strong>${t.name}</strong>
+                    <span>${t.role}</span>
+                </div>
+            `;
+            dotsNav.forEach(d => d.classList.remove('active'));
+            dotsNav[index].classList.add('active');
+        }
+        
+        document.getElementById('next-quote').addEventListener('click', () => {
+            let next = (currentQuote + 1) % testimonials.length;
+            updateQuote(next);
+        });
+        document.getElementById('prev-quote').addEventListener('click', () => {
+            let prev = (currentQuote - 1 + testimonials.length) % testimonials.length;
+            updateQuote(prev);
+        });
+        dotsNav.forEach((dot, idx) => {
+            dot.addEventListener('click', () => updateQuote(idx));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    min-width: 200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+    z-index: 1001;
+    top: 100%;
+    left: 50%;
+    transform-origin: top center;
+    transform: translateX(-50%) scale(0.95);
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+    transition: opacity 150ms var(--ease-out), transform 150ms var(--ease-out), visibility 150ms;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+.dropdown-content a {
+    color: var(--black) !important;
+    padding: 12px 24px;
+    display: block;
+    font-weight: 500;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--gray-light);
+    color: var(--primary-blue) !important;
+}
+
+/* Page Headers for subpages */
+.page-header {
+    padding: 180px 5% 80px;
+    background: var(--blue-light);
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    margin-bottom: 24px;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: var(--text-dark);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* FAQ Accordion */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 5%;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--gray-light);
+    margin-bottom: 16px;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 24px 0;
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding-bottom: 24px;
+    color: var(--text-muted);
+}
+
+.accordion-header.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-header i {
+    transition: transform 0.3s ease;
+}
+
+/* Timeline (Resume) */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 5%;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 48px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-blue);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--primary-blue);
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.timeline-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.timeline-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 5%;
+}
+
+.blog-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 32px;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.blog-content h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+/* Certificates/Awards Grid */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 5%;
+}
+
+.award-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--gray-light);
+}
+
+.award-icon {
+    font-size: 48px;
+    color: #F59E0B;
+    margin-bottom: 24px;
+}
+
+.award-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
