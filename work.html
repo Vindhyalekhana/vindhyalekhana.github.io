@@ -38,14 +38,27 @@
         <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
     </header>
 
-    <main>
-        <div class="page-header">
-            <h1>My Projects</h1>
-            <p>A detailed look into the scalable applications, intelligent systems, and impactful digital experiences I've built.</p>
+        <main>
+        <div class="page-header" style="padding: 100px 20px 60px; text-align: center; background: var(--blue-light); border-bottom: 1px solid rgba(0,0,0,0.05);">
+            <h1 style="font-size: clamp(40px, 5vw, 64px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 16px; color: var(--black);">My Projects</h1>
+            <p style="font-size: 20px; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.6;">A detailed look into the scalable applications, intelligent systems, and impactful digital experiences I've built.</p>
         </div>
 
-        <section class="projects" style="padding-top: 80px; background: var(--white);">
-            <div id="github-projects-container" class="projects-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto;">
+        <section class="featured-projects" id="featured-section" style="padding: 80px 24px; background: var(--white); display: none;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="font-size: 32px; margin-bottom: 40px; color: var(--black); display: flex; align-items: center; gap: 12px;"><i class="fa-solid fa-star" style="color: #f59e0b;"></i> Featured Projects</h2>
+                <div id="featured-projects-container" style="display: grid; grid-template-columns: 1fr; gap: 40px;">
+                    <!-- Featured projects injected here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="all-projects" style="padding: 80px 24px; background: var(--gray-light);">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 id="all-projects-title" style="font-size: 32px; margin-bottom: 40px; color: var(--black);">All Projects</h2>
+                <div id="github-projects-container" class="projects-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 32px;">
+                    <!-- Regular projects injected here -->
+                </div>
             </div>
         </section>
     </main>
