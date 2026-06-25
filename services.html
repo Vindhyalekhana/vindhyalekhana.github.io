@@ -43,18 +43,20 @@
         <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
     </header>
 
-    <main>
-        <div class="page-header">
-            <h1>Services</h1>
-            <p>From conceptualization to deployment, I offer end-to-end development services tailored to your needs.</p>
+        <main>
+        <!-- Page Header -->
+        <div class="page-header" style="padding: 100px 20px 60px; text-align: center; background: var(--blue-light); border-bottom: 1px solid rgba(0,0,0,0.05);">
+            <h1 style="font-size: clamp(40px, 5vw, 64px); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 16px; color: var(--black);">Services I Offer</h1>
+            <p style="font-size: 20px; color: var(--text-muted); max-width: 800px; margin: 0 auto; line-height: 1.6;">I design and develop modern web solutions tailored to real-world needs. My services include web development, backend development and API design, AI and automation solutions, and software architecture for scalable projects. I focus on clean UI, responsive design, secure functionality, and maintainable code.</p>
         </div>
 
+        <!-- Services Section -->
         <section class="services" style="padding-top: 80px;">
             <div class="services-grid">
                 <!-- Card 1 -->
                 <div class="service-card gradient-blue">
                     <h3>Web Development</h3>
-                    <p>Design and develop responsive, high-performance web applications using modern technologies.</p>
+                    <p>Building modern, responsive, fast websites and portfolio sites.</p>
                     <div class="service-visual tags-cloud">
                         <span class="cloud-tag">HTML</span>
                         <span class="cloud-tag">CSS</span>
@@ -65,25 +67,21 @@
 
                 <!-- Card 2 -->
                 <div class="service-card white-card">
-                    <h3>Backend Development</h3>
-                    <p>Develop secure APIs, authentication systems, and scalable server-side applications.</p>
+                    <h3>Backend Development & API Design</h3>
+                    <p>Creating secure server-side logic, APIs, authentication, and database integration.</p>
                     <div class="service-visual tags-cloud">
-                        <span class="cloud-tag"
-                            style="background: var(--gray-light); color: var(--black);">Node.js</span>
-                        <span class="cloud-tag"
-                            style="background: var(--gray-light); color: var(--black);">Express</span>
-                        <span class="cloud-tag" style="background: var(--gray-light); color: var(--black);">SQL</span>
-                        <span class="cloud-tag"
-                            style="background: var(--gray-light); color: var(--black);">MongoDB</span>
+                        <span class="cloud-tag" style="background: var(--gray-light); color: var(--black);">Node.js</span>
+                        <span class="cloud-tag" style="background: var(--gray-light); color: var(--black);">Express.js</span>
+                        <span class="cloud-tag" style="background: var(--gray-light); color: var(--black);">MongoDB</span>
+                        <span class="cloud-tag" style="background: var(--gray-light); color: var(--black);">MySQL</span>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="service-card gradient-blue-light">
                     <h3>AI & Automation</h3>
-                    <p>Build intelligent workflows and automation systems using modern AI tools.</p>
-                    <div class="service-visual nodes"
-                        style="display:flex; justify-content:center; align-items:center; gap: 20px; font-size: 40px; color: var(--primary-blue);">
+                    <p>Developing smart workflows, productivity tools, and AI-assisted solutions.</p>
+                    <div class="service-visual nodes" style="display:flex; justify-content:center; align-items:center; gap: 20px; font-size: 40px; color: var(--primary-blue);">
                         <i class="fa-solid fa-robot"></i>
                         <i class="fa-solid fa-arrow-right-long" style="font-size: 20px;"></i>
                         <i class="fa-solid fa-bolt"></i>
@@ -92,21 +90,107 @@
 
                 <!-- Card 4 -->
                 <div class="service-card white-card span-2 card-impact">
-                    <div class="impact-visual">
-                        <img src="assets/hands.png" alt="Collaborative tech">
+                    <div class="impact-visual" style="flex: 1; min-height: 200px; display: flex; align-items: center; justify-content: center; background: var(--gray-light); border-radius: 16px;">
+                        <i class="fa-solid fa-sitemap" style="font-size: 64px; color: var(--primary);"></i>
                     </div>
                     <div class="impact-content">
                         <span class="trusted-badge">End-to-End Solutions</span>
-                        <h3>Software Architecture</h3>
-                        <p>Design scalable system architectures for enterprise-level applications.</p>
-                        <a href="contact.html" class="btn btn-dark">Start A Project <i
-                                class="fa-solid fa-arrow-right"></i></a>
+                        <h3>Software Architecture & Project Setup</h3>
+                        <p>Planning scalable project structure, clean codebase design, and maintainable application flow.</p>
+                        <a href="contact.html" class="btn btn-dark">Start A Project <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Target Audience Section -->
+        <section class="audience-section" style="padding: 80px 24px; max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 32px; margin-bottom: 16px;">Who I Work With</h2>
+            <p style="font-size: 18px; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px;">I work with individuals and organizations who need practical and polished digital solutions.</p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+                <span style="padding: 12px 24px; background: var(--white); border: 1px solid rgba(0,0,0,0.05); border-radius: 100px; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.03);"><i class="fa-solid fa-user-graduate" style="color: var(--primary); margin-right: 8px;"></i> Students</span>
+                <span style="padding: 12px 24px; background: var(--white); border: 1px solid rgba(0,0,0,0.05); border-radius: 100px; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.03);"><i class="fa-solid fa-rocket" style="color: var(--primary); margin-right: 8px;"></i> Startups</span>
+                <span style="padding: 12px 24px; background: var(--white); border: 1px solid rgba(0,0,0,0.05); border-radius: 100px; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.03);"><i class="fa-solid fa-store" style="color: var(--primary); margin-right: 8px;"></i> Small Businesses</span>
+                <span style="padding: 12px 24px; background: var(--white); border: 1px solid rgba(0,0,0,0.05); border-radius: 100px; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.03);"><i class="fa-solid fa-id-badge" style="color: var(--primary); margin-right: 8px;"></i> Personal Brands</span>
+                <span style="padding: 12px 24px; background: var(--white); border: 1px solid rgba(0,0,0,0.05); border-radius: 100px; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.03);"><i class="fa-solid fa-palette" style="color: var(--primary); margin-right: 8px;"></i> Creators & Freelancers</span>
+            </div>
+        </section>
 
+        <!-- Workflow / Process Section -->
+        <section class="process-section" style="padding: 80px 24px; background: var(--blue-light);">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="font-size: 32px; text-align: center; margin-bottom: 48px;">My Process</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+                    <div style="background: var(--white); padding: 32px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <div style="width: 48px; height: 48px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; margin-bottom: 24px;">1</div>
+                        <h3 style="margin-bottom: 12px; font-size: 20px;">Discovery</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Understand the client's goal, users, and requirements to build a solid foundation.</p>
+                    </div>
+                    <div style="background: var(--white); padding: 32px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <div style="width: 48px; height: 48px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; margin-bottom: 24px;">2</div>
+                        <h3 style="margin-bottom: 12px; font-size: 20px;">Planning & Design</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Finalize the structural architecture, feature set, and overall UI/UX direction.</p>
+                    </div>
+                    <div style="background: var(--white); padding: 32px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <div style="width: 48px; height: 48px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; margin-bottom: 24px;">3</div>
+                        <h3 style="margin-bottom: 12px; font-size: 20px;">Development</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Build the website or application focusing on clean architecture and scalable code.</p>
+                    </div>
+                    <div style="background: var(--white); padding: 32px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                        <div style="width: 48px; height: 48px; background: var(--primary); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; margin-bottom: 24px;">4</div>
+                        <h3 style="margin-bottom: 12px; font-size: 20px;">Testing & Deployment</h3>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Fix issues, refine performance, and seamlessly launch the final product.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing & Packages Section -->
+        <section class="pricing-section" style="padding: 100px 24px 80px; max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-size: 32px; text-align: center; margin-bottom: 16px;">Pricing & Packages</h2>
+            <p style="font-size: 18px; color: var(--text-muted); text-align: center; max-width: 600px; margin: 0 auto 48px;">Pricing depends on the project scope, features, and timeline. I offer custom quotes based on requirements.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; align-items: stretch;">
+                <!-- Starter -->
+                <div style="padding: 40px; border-radius: 24px; background: var(--white); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.04); display: flex; flex-direction: column;">
+                    <h3 style="font-size: 24px; margin-bottom: 12px; color: var(--black);">Starter Project</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 32px; flex-grow: 1;">Perfect for simple websites, landing pages, and personal portfolios to establish your online presence.</p>
+                    <a href="contact.html" class="btn btn-outline" style="text-align: center; display: block; padding: 14px; border-radius: 100px; font-weight: 600; text-decoration: none; color: var(--black); border: 2px solid var(--black);">Get a Quote</a>
+                </div>
+                <!-- Standard -->
+                <div style="padding: 40px; border-radius: 24px; background: var(--black); color: var(--white); box-shadow: 0 20px 40px rgba(0,0,0,0.1); display: flex; flex-direction: column; transform: scale(1.03); z-index: 1;">
+                    <div style="background: var(--primary); color: var(--white); padding: 6px 12px; border-radius: 100px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; align-self: flex-start; margin-bottom: 16px;">Most Popular</div>
+                    <h3 style="font-size: 24px; margin-bottom: 12px; color: var(--white);">Standard Project</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 32px; flex-grow: 1;">Ideal for full-featured web applications with backend integration, authentication, and dynamic content.</p>
+                    <a href="contact.html" class="btn btn-primary" style="text-align: center; display: block; padding: 14px; border-radius: 100px; font-weight: 600; text-decoration: none; background: var(--primary); color: var(--white); border: none;">Get a Quote</a>
+                </div>
+                <!-- Advanced -->
+                <div style="padding: 40px; border-radius: 24px; background: var(--white); border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.04); display: flex; flex-direction: column;">
+                    <h3 style="font-size: 24px; margin-bottom: 12px; color: var(--black);">Advanced Project</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 32px; flex-grow: 1;">For scalable enterprise systems, complex dashboards, APIs, and AI automation tools.</p>
+                    <a href="contact.html" class="btn btn-outline" style="text-align: center; display: block; padding: 14px; border-radius: 100px; font-weight: 600; text-decoration: none; color: var(--black); border: 2px solid var(--black);">Get a Quote</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Technologies Grid -->
+        <section class="tech-section" style="padding: 40px 24px 100px; max-width: 1000px; margin: 0 auto; text-align: center;">
+            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 32px;">Core Technologies & Strengths</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">HTML/CSS/JS</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">React</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">Node.js / Express.js</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">MongoDB / MySQL</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">REST APIs</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">Git / GitHub</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">Python</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">Java</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">Blockchain & IoT</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">Cybersecurity</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">Clean Architecture</span>
+                <span class="cloud-tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black);">Responsive UI/UX</span>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
