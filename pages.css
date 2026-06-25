@@ -230,4 +230,105 @@
 .award-card h3 {
     font-size: 20px;
     margin-bottom: 12px;
+}\n
+/* --- Modal Styles --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
 }
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background: var(--white);
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.modal-overlay.active .modal-container {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgba(0,0,0,0.1);
+    color: var(--black);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    padding: 40px 40px 24px;
+    background: var(--blue-light);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.modal-content-area {
+    padding: 40px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* GitHub Markdown Styling */
+.markdown-body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
+    color: var(--black);
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+.markdown-body h1 { font-size: 32px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 8px; }
+.markdown-body h2 { font-size: 24px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 8px; }
+.markdown-body p { margin-bottom: 16px; }
+.markdown-body ul, .markdown-body ol { margin-bottom: 16px; padding-left: 24px; }
+.markdown-body li { margin-bottom: 8px; }
+.markdown-body pre { background: var(--gray-light); padding: 16px; border-radius: 12px; overflow-x: auto; margin-bottom: 16px; }
+.markdown-body code { font-family: monospace; background: rgba(0,0,0,0.05); padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+.markdown-body pre code { background: none; padding: 0; }
+.markdown-body img { max-width: 100%; border-radius: 12px; }
+.markdown-body blockquote { border-left: 4px solid var(--primary); padding-left: 16px; color: var(--text-muted); margin: 0 0 16px 0; }

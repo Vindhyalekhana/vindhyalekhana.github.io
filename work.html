@@ -61,6 +61,26 @@
                 </div>
             </div>
         </section>
+    
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal-overlay">
+            <div class="modal-container">
+                <button id="close-modal" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+                <div class="modal-header">
+                    <h2 id="modal-title" style="font-size: 32px; font-weight: 700; color: var(--black); margin-bottom: 8px;">Project Title</h2>
+                    <div id="modal-tags" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;"></div>
+                    <div style="display: flex; gap: 12px;">
+                        <a id="modal-source" href="#" target="_blank" class="btn btn-dark" style="padding: 10px 20px; font-size: 14px; border-radius: 100px;">Source Code <i class="fa-brands fa-github"></i></a>
+                        <a id="modal-demo" href="#" target="_blank" class="btn btn-outline" style="padding: 10px 20px; font-size: 14px; border-radius: 100px; border: 2px solid var(--black); color: var(--black); display: none;">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="modal-content-area">
+                    <div id="modal-readme" class="markdown-body">
+                        <div style="text-align: center; padding: 40px;"><i class="fa-solid fa-spinner fa-spin fa-2x" style="color: var(--primary);"></i><p style="margin-top: 16px; color: var(--text-muted);">Loading details from GitHub...</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
