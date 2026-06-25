@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
+        card.style.cursor = 'pointer';
         
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-6px)';
@@ -87,6 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0)';
             card.style.boxShadow = isFeatured ? '0 20px 40px rgba(0,0,0,0.06)' : '0 10px 30px rgba(0,0,0,0.04)';
+        });
+
+        // Open modal on card click
+        card.addEventListener('click', () => {
+            window.openProjectModal(repo);
         });
 
         let tagsHtml = '';
@@ -124,8 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${tagsHtml ? `<div class="tags" style="margin-bottom: 32px; display: flex; flex-wrap: wrap; gap: 8px;">${tagsHtml}</div>` : ''}
                 
                 <div style="display: flex; gap: 12px; margin-top: auto; flex-wrap: wrap;">
-                    <a href="${repo.html_url}" target="_blank" class="${isFeatured ? 'btn btn-primary' : 'btn btn-dark'}" style="padding: 12px 24px; font-size: 15px; text-align: center; border-radius: 100px;">Source Code <i class="fa-brands fa-github"></i></a>
-                    ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="btn btn-outline" style="padding: 12px 24px; font-size: 15px; text-align: center; border-radius: 100px; border: 2px solid var(--black); color: var(--black);">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>` : ''}
+                    <a href="${repo.html_url}" target="_blank" onclick="event.stopPropagation();" class="${isFeatured ? 'btn btn-primary' : 'btn btn-dark'}" style="padding: 12px 24px; font-size: 15px; text-align: center; border-radius: 100px;">Source Code <i class="fa-brands fa-github"></i></a>
+                    ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" onclick="event.stopPropagation();" class="btn btn-outline" style="padding: 12px 24px; font-size: 15px; text-align: center; border-radius: 100px; border: 2px solid var(--black); color: var(--black);">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>` : ''}
                 </div>
             </div>
         `;
@@ -137,4 +143,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return card;
     }
+
+    // --- Modal Logic ---
+    const modal = document.getElementById('project-modal');
+    const modalClose = document.getElementById('close-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalTags = document.getElementById('modal-tags');
+    const modalSource = document.getElementById('modal-source');
+    const modalDemo = document.getElementById('modal-demo');
+    const modalReadme = document.getElementById('modal-readme');
+
+    if (modalClose && modal) {
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+        });
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+
+    window.openProjectModal = function(repo) {
+        if (!modal) return;
+
+        // Populate Header
+        modalTitle.textContent = repo.name;
+        modalSource.href = repo.html_url;
+        
+        if (repo.homepage) {
+            modalDemo.href = repo.homepage;
+            modalDemo.style.display = 'inline-flex';
+        } else {
+            modalDemo.style.display = 'none';
+        }
+
+        // Tags
+        let tagsHtml = '';
+        if (repo.language) {
+            tagsHtml += `<span class="tag" style="background: var(--white); border: 1px solid rgba(0,0,0,0.05); color: var(--black); font-weight: 600;">${repo.language}</span>`;
+        }
+        if (repo.topics && repo.topics.length > 0) {
+            repo.topics.forEach(topic => {
+                tagsHtml += `<span class="tag" style="background: rgba(0,0,0,0.03); color: var(--text-muted);">${topic}</span>`;
+            });
+        }
+        modalTags.innerHTML = tagsHtml;
+
+        // Show Modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // Fetch README as HTML
+        modalReadme.innerHTML = '<div style="text-align: center; padding: 40px;"><i class="fa-solid fa-spinner fa-spin fa-2x" style="color: var(--primary);"></i><p style="margin-top: 16px; color: var(--text-muted);">Loading README from GitHub...</p></div>';
+        
+        fetch(`https://api.github.com/repos/${username}/${repo.name}/readme`, {
+            headers: {
+                'Accept': 'application/vnd.github.v3.html'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                if (response.status === 404) return null;
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(html => {
+            if (html) {
+                modalReadme.innerHTML = html;
+            } else {
+                modalReadme.innerHTML = `
+                    <div style="text-align: center; padding: 60px;">
+                        <i class="fa-brands fa-github fa-3x" style="color: var(--gray); margin-bottom: 16px;"></i>
+                        <h3 style="margin-bottom: 8px;">No README found</h3>
+                        <p style="color: var(--text-muted);">This repository doesn't have a README.md file detailing its architecture or challenges.</p>
+                        <p style="margin-top: 24px;">${repo.description || ''}</p>
+                    </div>`;
+            }
+        })
+        .catch(err => {
+            console.error('Failed to load README', err);
+            modalReadme.innerHTML = '<div style="color: #dc2626; padding: 20px;">Failed to load project details.</div>';
+        });
+    };
 });
