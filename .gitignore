@@ -1,0 +1,22 @@
+# Next.js & Dependencies
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Legacy backup
+legacy/
+
+# Root duplicates & large design files
+/Portfon — Personal Portfolio Website UI_UX __ Behance.pdf
+/profile picture.jpg.jpeg
+/certificates/
+
+# Environment
+.env*.local
+
+# Logs and OS
+*.log
+.DS_Store
+Thumbs.db
