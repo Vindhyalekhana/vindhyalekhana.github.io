@@ -72,30 +72,29 @@ export default function Navbar() {
               top: 'calc(100% + 12px)',
               left: 0,
               width: '100%',
-              background: 'rgba(15, 23, 42, 0.98)',
+              background: 'rgba(14, 14, 16, 0.98)',
               padding: '24px',
               borderRadius: '24px',
-              boxShadow: '0 16px 40px rgba(0,0,0,0.6)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
+              boxShadow: '0 16px 40px rgba(14, 14, 16, 0.6)',
+              border: '1px solid rgba(255, 251, 242, 0.12)',
               display: 'flex',
               flexDirection: 'column',
               gap: 16,
               zIndex: 999,
             }}
           >
-            <Link href="/" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>Home</Link>
-            <Link href="/about" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>About</Link>
-            <Link href="/work" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>Projects</Link>
-            <Link href="/contact" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>Contact</Link>
-            <Link href="/resume" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>Resume</Link>
-            <Link href="/skills" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>Skills &amp; Certificates</Link>
-            <Link href="/awards" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>Awards</Link>
-            <Link href="/blog" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>Blog</Link>
-            <Link href="/faq" style={{ color: '#E1E2E5' }} onClick={() => setMobileOpen(false)}>FAQ</Link>
+            <Link href="/" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>Home</Link>
+            <Link href="/about" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/work" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>Projects</Link>
+            <Link href="/contact" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>Contact</Link>
+            <Link href="/resume" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>Resume</Link>
+            <Link href="/skills" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>Skills &amp; Certificates</Link>
+            <Link href="/awards" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>Awards</Link>
+            <Link href="/blog" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>Blog</Link>
+            <Link href="/faq" style={{ color: '#F7F4ED' }} onClick={() => setMobileOpen(false)}>FAQ</Link>
           </div>
         )}
       </header>
     </div>
   )
 }
-

@@ -32,63 +32,87 @@ const B = '/certificates/'
 
 /* ─── Category Definitions ───────────────────────────────── */
 const categories: Category[] = [
-  { id: 'all', name: 'All Credentials', icon: 'fa-solid fa-layer-group', color: 'var(--primary-blue)' },
-  { id: 'algo', name: 'Algorithms & DSA', icon: 'fa-solid fa-diagram-project', color: '#2563EB' },
-  { id: 'cyber', name: 'Cybersecurity', icon: 'fa-solid fa-shield-halved', color: '#059669' },
-  { id: 'db', name: 'Databases & MongoDB', icon: 'fa-solid fa-database', color: '#0D9488' },
-  { id: 'ml', name: 'Python & Machine Learning', icon: 'fa-solid fa-brain', color: '#D97706' },
-  { id: 'web', name: 'Web Dev & Git', icon: 'fa-solid fa-globe', color: '#DC2626' },
-  { id: 'ai', name: 'Artificial Intelligence', icon: 'fa-solid fa-microchip', color: '#7C3AED' },
-  { id: 'prod', name: 'Productivity', icon: 'fa-solid fa-briefcase', color: '#475569' },
+  { id: 'all', name: 'All Credentials', icon: 'fa-solid fa-layer-group', color: '#8A5D3C' },
+  { id: 'algo', name: 'Algorithms & Data Structures', icon: 'fa-solid fa-diagram-project', color: '#8A5D3C' },
+  { id: 'cyber', name: 'Cybersecurity', icon: 'fa-solid fa-shield-halved', color: '#8A5D3C' },
+  { id: 'db', name: 'Databases & MongoDB', icon: 'fa-solid fa-database', color: '#8A5D3C' },
+  { id: 'ml', name: 'Python & Machine Learning', icon: 'fa-solid fa-brain', color: '#8A5D3C' },
+  { id: 'web', name: 'Web Dev & Git', icon: 'fa-solid fa-globe', color: '#8A5D3C' },
+  { id: 'ai', name: 'Artificial Intelligence', icon: 'fa-solid fa-microchip', color: '#8A5D3C' },
+  { id: 'prod', name: 'Productivity & Office', icon: 'fa-solid fa-briefcase', color: '#8A5D3C' },
 ]
 
-/* ─── Certificate Data ───────────────────────────────────── */
+/* ─── 4 Top Summary Domains (matches user layout) ────────── */
+const topDomains = [
+  {
+    title: 'Frontend',
+    icon: 'fa-solid fa-laptop-code',
+    skills: ['HTML5 & CSS3', 'JavaScript (ES6+)', 'React.js', 'Tailwind CSS'],
+  },
+  {
+    title: 'Backend',
+    icon: 'fa-solid fa-server',
+    skills: ['Node.js', 'Express.js', 'Python', 'REST APIs'],
+  },
+  {
+    title: 'Database',
+    icon: 'fa-solid fa-database',
+    skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'SQL Optimization'],
+  },
+  {
+    title: 'Tools & Others',
+    icon: 'fa-solid fa-wrench',
+    skills: ['Git & GitHub', 'Machine Learning', 'Cybersecurity', 'Figma'],
+  },
+]
+
+/* ─── Certificate Data (Complete 23+ Credentials) ─────────── */
 const certificates: Certificate[] = [
   // Algorithms & DSA
   {
     id: 'dsa-basics',
-    title: 'Basics of Data Structures and Algorithms',
+    title: 'Basics of Data Structures & Algorithms',
     issuer: 'Coursera',
-    category: 'Algorithms & DSA',
+    category: 'Algorithms & Data Structures',
     categoryId: 'algo',
     pdf: B + enc('Basics of Data structure and algorithms certificate.pdf'),
-    color: '#2563EB',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-sitemap',
     year: '2024',
     skills: ['Data Structures', 'Arrays & Linked Lists', 'Time Complexity'],
   },
   {
     id: 'daa',
-    title: 'Design and Analysis of Algorithms',
+    title: 'Design Analysis & Algorithms',
     issuer: 'Coursera',
-    category: 'Algorithms & DSA',
+    category: 'Algorithms & Data Structures',
     categoryId: 'algo',
     pdf: B + enc('Design analysis and algorithms certificate.pdf'),
-    color: '#2563EB',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-code-branch',
     year: '2024',
-    skills: ['Dynamic Programming', 'Greedy Algorithms', 'Graph Algorithms'],
+    skills: ['Dynamic Programming', 'Greedy Algorithms', 'Graph Theory'],
   },
   {
     id: 'leetcode-75',
-    title: 'LeetCode Data Structures 75 Badge',
+    title: 'LeetCode Data Structures 75',
     issuer: 'LeetCode',
-    category: 'Algorithms & DSA',
+    category: 'Algorithms & Data Structures',
     categoryId: 'algo',
     badge: B + enc('leet code data structures 75 badge.png'),
-    color: '#D97706',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-award',
     year: '2024',
     skills: ['75 Curated DSA Problems', 'Binary Trees', 'Heaps & Graphs'],
   },
   {
     id: 'leetcode-sql50',
-    title: 'LeetCode SQL 50 Badge',
+    title: 'LeetCode SQL 50',
     issuer: 'LeetCode',
-    category: 'Algorithms & DSA',
+    category: 'Algorithms & Data Structures',
     categoryId: 'algo',
     badge: B + enc('leet code sql50 badge.png'),
-    color: '#D97706',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-award',
     year: '2024',
     skills: ['50 Advanced SQL Queries', 'Aggregations', 'Subqueries & Joins'],
@@ -102,7 +126,7 @@ const certificates: Certificate[] = [
     category: 'Cybersecurity',
     categoryId: 'cyber',
     pdf: B + enc('foundation of cyber security certificate.pdf'),
-    color: '#059669',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-shield-halved',
     year: '2024',
     skills: ['Security Frameworks', 'Threat Intelligence', 'CIA Triad'],
@@ -114,7 +138,7 @@ const certificates: Certificate[] = [
     category: 'Cybersecurity',
     categoryId: 'cyber',
     pdf: B + enc('network security certificate.pdf'),
-    color: '#059669',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-network-wired',
     year: '2024',
     skills: ['TCP/IP & Firewalls', 'VPNs & Cryptography', 'Packet Analysis'],
@@ -130,10 +154,10 @@ const certificates: Certificate[] = [
       { label: 'IBM Credential', url: B + enc('Introduction to cybersecurity essentials/Cyber security essentials certificate.pdf') },
       { label: 'Coursera Certificate', url: B + enc('Introduction to cybersecurity essentials/introduction to cyber security essentials Coursera certificate.pdf') },
     ],
-    color: '#059669',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-lock',
     year: '2024',
-    skills: ['Identity & Access Management', 'Malware Analysis', 'Zero Trust'],
+    skills: ['IAM', 'Threat Modeling', 'Zero Trust Architecture'],
   },
 
   // Databases & MongoDB
@@ -144,7 +168,7 @@ const certificates: Certificate[] = [
     category: 'Databases & MongoDB',
     categoryId: 'db',
     pdf: B + enc('Introduction to the Fundamentals of Databases.pdf'),
-    color: '#7C3AED',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-database',
     year: '2024',
     skills: ['Relational Modeling', 'Schema Normalization', 'SQL DDL / DML'],
@@ -156,7 +180,7 @@ const certificates: Certificate[] = [
     category: 'Databases & MongoDB',
     categoryId: 'db',
     pdf: B + enc('HackerRank sql_intermediate certificate.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-table',
     year: '2024',
     skills: ['Advanced Window Functions', 'Recursive CTEs', 'Optimized Queries'],
@@ -169,7 +193,7 @@ const certificates: Certificate[] = [
     categoryId: 'db',
     badge: B + enc('MongoDB Data Modeling Path/1. CRUD Operations in MongoDB/CRUD Operations in MongoDB badge.png'),
     pdf: B + enc('MongoDB Data Modeling Path/1. CRUD Operations in MongoDB/CRUD Operations in MongoDB credly certificate.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-leaf',
     year: '2024',
     skills: ['Query Filters', 'Update Operators', 'Bulk Writes & Projection'],
@@ -182,7 +206,7 @@ const certificates: Certificate[] = [
     categoryId: 'db',
     badge: B + enc('MongoDB Data Modeling Path/2. MongoDB Schema Design Patterns and Anti-patterns/MongoDB Schema Design Patterns and Anti-patterns Skill Badge.png'),
     pdf: B + enc('MongoDB Data Modeling Path/2. MongoDB Schema Design Patterns and Anti-patterns/MongoDB Schema Design Patterns and Anti-patterns Skill Badge.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-leaf',
     year: '2024',
     skills: ['Document Embedding', 'Referencing Models', 'Anti-Pattern Avoidance'],
@@ -195,7 +219,7 @@ const certificates: Certificate[] = [
     categoryId: 'db',
     badge: B + enc('MongoDB Data Modeling Path/3. From Relational Model (SQL) to MongoDBs Document Model/From Relational Model (SQL) to MongoDBs Document Model.png'),
     pdf: B + enc('MongoDB Data Modeling Path/3. From Relational Model (SQL) to MongoDBs Document Model/From Relational Model (SQL) to MongoDBs Document Model crdly certificate.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-leaf',
     year: '2024',
     skills: ['SQL to NoSQL Migration', 'Denormalization', '1:N & N:M Relations'],
@@ -208,7 +232,7 @@ const certificates: Certificate[] = [
     categoryId: 'db',
     badge: B + enc('MongoDB Data Modeling Path/4. MongoDB Advanced Schema Design Patterns and Anti-patterns/MongoDB Advanced Schema Design Patterns and Anti-patterns Skill Badge.png'),
     pdf: B + enc('MongoDB Data Modeling Path/4. MongoDB Advanced Schema Design Patterns and Anti-patterns/MongoDB Advanced Schema Design Patterns and Anti-patterns Skill Badge credly certificate.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-leaf',
     year: '2024',
     skills: ['Bucket Pattern', 'Outlier Pattern', 'Polymorphic Pattern'],
@@ -221,7 +245,7 @@ const certificates: Certificate[] = [
     categoryId: 'db',
     badge: B + enc('MongoDB Data Modeling Path/5. MongoDB Schema Design Optimization/mongodb-schema-design-optimization.png'),
     pdf: B + enc('MongoDB Data Modeling Path/5. MongoDB Schema Design Optimization/MongoDB Schema Design Optimization certificate.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-leaf',
     year: '2024',
     skills: ['Workload Analysis', 'Schema Sizing', 'Performance Benchmarks'],
@@ -234,7 +258,7 @@ const certificates: Certificate[] = [
     categoryId: 'db',
     badge: B + enc('MongoDB Data Modeling Path/6. Fundamentals of Data Transformation Skill Check/mongodb-aggregation-fundamentals badge.png'),
     pdf: B + enc('MongoDB Data Modeling Path/6. Fundamentals of Data Transformation Skill Check/Mongodb aggression fundamentals.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-leaf',
     year: '2024',
     skills: ['$match & $group', 'Pipeline Optimization', '$lookup Joins'],
@@ -247,7 +271,7 @@ const certificates: Certificate[] = [
     categoryId: 'db',
     badge: B + enc('MongoDB Data Modeling Path/7. MongoDB Indexing Design Fundamentals/mongodb-indexing-design-fundamentals badge.png'),
     pdf: B + enc('MongoDB Data Modeling Path/7. MongoDB Indexing Design Fundamentals/MongoDB Indexing Design Fundamentals certificate.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-leaf',
     year: '2024',
     skills: ['Compound Indexes', 'ESR Rule', 'Covered Queries'],
@@ -260,7 +284,7 @@ const certificates: Certificate[] = [
     categoryId: 'db',
     badge: B + enc('MongoDB Data Modeling Path/8. Optimizing MongoDB Performance with Tuning Tools/optimizing-mongodb-performance-with-tuning-tools badge.png'),
     pdf: B + enc('MongoDB Data Modeling Path/8. Optimizing MongoDB Performance with Tuning Tools/Optimizing MongoDB Performance with Tuning Tools certificate.pdf'),
-    color: '#0D9488',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-leaf',
     year: '2024',
     skills: ['explain() Plans', 'Atlas Performance Advisor', 'Profiler & Diagnostics'],
@@ -274,7 +298,7 @@ const certificates: Certificate[] = [
     category: 'Python & Machine Learning',
     categoryId: 'ml',
     pdf: B + enc('Hacker Rank python_basic certificate.pdf'),
-    color: '#D97706',
+    color: '#8A5D3C',
     icon: 'fa-brands fa-python',
     year: '2024',
     skills: ['Python 3 Idioms', 'OOP & Comprehensions', 'Problem Solving'],
@@ -290,10 +314,10 @@ const certificates: Certificate[] = [
       { label: 'IBM Credential', url: B + enc('Mechine learning with python certificates/machine learning with python certificate.pdf') },
       { label: 'Coursera Certificate', url: B + enc('Mechine learning with python certificates/mechine learning with python Coursera certificate.pdf') },
     ],
-    color: '#D97706',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-brain',
     year: '2024',
-    skills: ['Regression & Classification', 'Scikit-Learn', 'Model Evaluation & Clustering'],
+    skills: ['Regression & Classification', 'Scikit-Learn', 'Model Evaluation'],
   },
 
   // Web Dev & Git
@@ -305,7 +329,7 @@ const certificates: Certificate[] = [
     categoryId: 'web',
     badge: B + enc('Web Development Fundamentals/web-development-fundamentals badge.png'),
     pdf: B + enc('Web Development Fundamentals/Web Development Fundamentals certificate.pdf'),
-    color: '#DC2626',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-globe',
     year: '2024',
     skills: ['Modern HTML5 & CSS3', 'DOM Manipulation', 'Responsive Web Design'],
@@ -321,7 +345,7 @@ const certificates: Certificate[] = [
       { label: 'IBM Credential', url: B + enc('Git and github/git and github certificate.pdf') },
       { label: 'Coursera Certificate', url: B + enc('Git and github/git and github Coursera certificate.pdf') },
     ],
-    color: '#EA580C',
+    color: '#8A5D3C',
     icon: 'fa-brands fa-git-alt',
     year: '2024',
     skills: ['Branching Strategies', 'Pull Requests & Merge Conflicts', 'CI/CD Basics'],
@@ -339,7 +363,7 @@ const certificates: Certificate[] = [
       { label: 'IBM Credential', url: B + enc('Introduction to artificial intelligence/artificial intelligence essentials certificate.pdf') },
       { label: 'Coursera Certificate', url: B + enc('Introduction to artificial intelligence/introduction to artificial intelligence certificate.pdf') },
     ],
-    color: '#7C3AED',
+    color: '#8A5D3C',
     icon: 'fa-solid fa-microchip',
     year: '2024',
     skills: ['Generative AI & LLMs', 'Neural Networks', 'AI Ethics & Applications'],
@@ -350,10 +374,10 @@ const certificates: Certificate[] = [
     id: 'ms-word',
     title: 'Microsoft Word Specialist',
     issuer: 'Microsoft',
-    category: 'Productivity',
+    category: 'Productivity & Office',
     categoryId: 'prod',
     pdf: B + enc('Microsoft word certificate.pdf'),
-    color: '#185ABD',
+    color: '#8A5D3C',
     icon: 'fa-brands fa-microsoft',
     year: '2024',
     skills: ['Document Formatting', 'Technical Reports', 'Collaboration Tools'],
@@ -362,65 +386,17 @@ const certificates: Certificate[] = [
     id: 'ms-powerpoint',
     title: 'Microsoft PowerPoint Specialist',
     issuer: 'Microsoft',
-    category: 'Productivity',
+    category: 'Productivity & Office',
     categoryId: 'prod',
     pdf: B + enc('Microsoft power point certificate.pdf'),
-    color: '#D24726',
+    color: '#8A5D3C',
     icon: 'fa-brands fa-microsoft',
     year: '2024',
     skills: ['Visual Presentation Design', 'Infographics', 'Storytelling'],
   },
 ]
 
-/* ─── Technical Skill Categories ─────────────────────────── */
-const technicalSkills = [
-  {
-    category: 'Frontend Development',
-    icon: 'fa-solid fa-code',
-    color: '#2563EB',
-    skills: [
-      { name: 'HTML5 & CSS3', level: 'Advanced', percent: 92 },
-      { name: 'JavaScript (ES6+)', level: 'Advanced', percent: 88 },
-      { name: 'React.js & Next.js', level: 'Proficient', percent: 84 },
-      { name: 'Tailwind CSS & Responsive UI', level: 'Advanced', percent: 90 },
-    ],
-  },
-  {
-    category: 'Backend & APIs',
-    icon: 'fa-solid fa-server',
-    color: '#059669',
-    skills: [
-      { name: 'Node.js & Express.js', level: 'Proficient', percent: 82 },
-      { name: 'Python', level: 'Proficient', percent: 85 },
-      { name: 'RESTful API Architecture', level: 'Proficient', percent: 86 },
-      { name: 'Authentication & Security', level: 'Intermediate', percent: 78 },
-    ],
-  },
-  {
-    category: 'Databases & Storage',
-    icon: 'fa-solid fa-database',
-    color: '#0D9488',
-    skills: [
-      { name: 'MongoDB & Aggregation', level: 'Certified Expert', percent: 92 },
-      { name: 'SQL & Relational Design', level: 'Certified', percent: 86 },
-      { name: 'Schema Optimization & Indexing', level: 'Certified', percent: 88 },
-      { name: 'MySQL & PostgreSQL', level: 'Proficient', percent: 80 },
-    ],
-  },
-  {
-    category: 'DevOps, AI & Security',
-    icon: 'fa-solid fa-shield-halved',
-    color: '#7C3AED',
-    skills: [
-      { name: 'Git & GitHub Workflows', level: 'Certified', percent: 90 },
-      { name: 'Machine Learning (Scikit-Learn)', level: 'Certified', percent: 76 },
-      { name: 'Cybersecurity Principles', level: 'Certified', percent: 80 },
-      { name: 'Cloud & Vercel Deployment', level: 'Proficient', percent: 82 },
-    ],
-  },
-]
-
-/* ─── Preview Modal Component (Clean Light / Dark Hybrid) ─ */
+/* ─── Preview Modal Component (Warm Palette) ─────────────── */
 interface ModalState {
   type: 'pdf' | 'badge'
   title: string
@@ -457,7 +433,7 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
         position: 'fixed',
         inset: 0,
         zIndex: 10000,
-        backgroundColor: 'rgba(15, 23, 42, 0.75)',
+        backgroundColor: 'rgba(14, 14, 16, 0.78)',
         backdropFilter: 'blur(8px)',
         WebkitBackdropFilter: 'blur(8px)',
         display: 'flex',
@@ -472,13 +448,13 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
           width: '100%',
           maxWidth: '960px',
           maxHeight: '92vh',
-          backgroundColor: '#FFFFFF',
+          backgroundColor: 'var(--soft-cream)',
           borderRadius: '24px',
           overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
-          boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.1)',
-          border: '1px solid rgba(0, 0, 0, 0.1)',
+          boxShadow: '0 25px 60px -15px rgba(14, 14, 16, 0.5), 0 0 30px rgba(138, 93, 60, 0.12)',
+          border: '1px solid var(--gray-light)',
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -486,12 +462,12 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
         <div
           style={{
             padding: '18px 24px',
-            borderBottom: '1px solid #E2E8F0',
+            borderBottom: '1px solid var(--gray-light)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             gap: '16px',
-            backgroundColor: '#FFFFFF',
+            backgroundColor: 'var(--soft-cream)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px', minWidth: 0 }}>
@@ -500,106 +476,77 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
                 width: '42px',
                 height: '42px',
                 borderRadius: '12px',
-                backgroundColor: 'rgba(33, 94, 253, 0.08)',
-                border: '1px solid rgba(33, 94, 253, 0.2)',
+                backgroundColor: 'rgba(138, 93, 60, 0.12)',
+                border: '1px solid rgba(138, 93, 60, 0.25)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                color: 'var(--warm-brown)',
+                fontSize: '18px',
                 flexShrink: 0,
               }}
             >
-              <i
-                className={modal.type === 'badge' ? 'fa-solid fa-award' : 'fa-solid fa-file-pdf'}
-                style={{ color: 'var(--primary-blue)', fontSize: '18px' }}
-              />
+              <i className={modal.type === 'pdf' ? 'fa-solid fa-certificate' : 'fa-solid fa-award'} />
             </div>
             <div style={{ minWidth: 0 }}>
               <h3
                 style={{
                   margin: 0,
-                  fontSize: '16px',
+                  fontSize: '17px',
                   fontWeight: 700,
-                  color: 'var(--black)',
+                  color: 'var(--deep-black)',
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  letterSpacing: '-0.01em',
                   fontFamily: 'Georgia, serif',
                 }}
               >
                 {modal.title}
               </h3>
-              <p style={{ margin: '2px 0 0', fontSize: '13px', color: 'var(--text-muted)' }}>
-                Issued by <strong style={{ color: 'var(--text-dark)' }}>{modal.issuer}</strong>
+              <p style={{ margin: '2px 0 0', fontSize: '13px', color: 'var(--warm-brown)', fontWeight: 600 }}>
+                {modal.issuer} • Verified Credential
               </p>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             {modal.type === 'pdf' && currentPdfUrl && (
               <a
                 href={currentPdfUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary"
                 style={{
-                  padding: '8px 18px',
-                  fontSize: '13px',
+                  padding: '8px 16px',
                   borderRadius: '100px',
+                  backgroundColor: 'var(--deep-black)',
+                  color: 'var(--soft-cream)',
+                  textDecoration: 'none',
+                  fontSize: '12px',
+                  fontWeight: 600,
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '6px',
-                  fontWeight: 600,
                 }}
               >
                 <i className="fa-solid fa-arrow-up-right-from-square" style={{ fontSize: '11px' }} />
-                Open Fullscreen
-              </a>
-            )}
-            {modal.type === 'badge' && modal.badgeUrl && (
-              <a
-                href={modal.badgeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{
-                  padding: '8px 18px',
-                  fontSize: '13px',
-                  borderRadius: '100px',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  fontWeight: 600,
-                }}
-              >
-                <i className="fa-solid fa-download" style={{ fontSize: '12px' }} />
-                Original Badge
+                Open PDF
               </a>
             )}
             <button
               onClick={onClose}
-              aria-label="Close modal"
               style={{
-                width: '38px',
-                height: '38px',
+                width: '36px',
+                height: '36px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                border: '1px solid rgba(0, 0, 0, 0.08)',
-                color: 'var(--text-dark)',
-                fontSize: '15px',
+                border: '1px solid var(--gray-light)',
+                backgroundColor: 'var(--warm-ivory)',
+                color: 'var(--deep-black)',
+                fontSize: '14px',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 transition: 'all 0.2s',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(239, 68, 68, 0.1)'
-                e.currentTarget.style.color = '#EF4444'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.05)'
-                e.currentTarget.style.color = 'var(--text-dark)'
               }}
             >
               ✕
@@ -612,8 +559,8 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
           <div
             style={{
               padding: '10px 24px',
-              backgroundColor: '#F8F9FA',
-              borderBottom: '1px solid #E2E8F0',
+              backgroundColor: 'var(--warm-ivory)',
+              borderBottom: '1px solid var(--gray-light)',
               display: 'flex',
               gap: '10px',
               alignItems: 'center',
@@ -633,9 +580,9 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
                   fontSize: '12px',
                   fontWeight: 600,
                   cursor: 'pointer',
-                  backgroundColor: activePdfIdx === i ? 'var(--black)' : '#FFFFFF',
-                  color: activePdfIdx === i ? '#FFFFFF' : 'var(--text-dark)',
-                  boxShadow: activePdfIdx === i ? 'none' : '0 2px 6px rgba(0,0,0,0.05)',
+                  backgroundColor: activePdfIdx === i ? 'var(--deep-black)' : 'var(--soft-cream)',
+                  color: activePdfIdx === i ? 'var(--soft-cream)' : 'var(--deep-black)',
+                  boxShadow: activePdfIdx === i ? 'none' : '0 2px 6px rgba(14, 14, 16, 0.05)',
                   transition: 'all 0.2s',
                 }}
               >
@@ -652,7 +599,7 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
             minHeight: '400px',
             maxHeight: '75vh',
             overflow: 'auto',
-            backgroundColor: '#F8F9FA',
+            backgroundColor: 'var(--warm-ivory)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -693,9 +640,9 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
                     position: 'relative',
                     padding: '28px',
                     borderRadius: '24px',
-                    backgroundColor: '#FFFFFF',
-                    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.08)',
-                    border: '1px solid rgba(0, 0, 0, 0.06)',
+                    backgroundColor: 'var(--soft-cream)',
+                    boxShadow: '0 20px 40px rgba(138, 93, 60, 0.08)',
+                    border: '1px solid var(--gray-light)',
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -718,8 +665,8 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
                     gap: '6px',
                     padding: '4px 14px',
                     borderRadius: '100px',
-                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
-                    color: '#059669',
+                    backgroundColor: 'rgba(138, 93, 60, 0.1)',
+                    color: 'var(--warm-brown)',
                     fontSize: '12px',
                     fontWeight: 600,
                     marginBottom: '12px',
@@ -727,7 +674,7 @@ function PreviewModal({ modal, onClose }: { modal: ModalState; onClose: () => vo
                 >
                   <i className="fa-solid fa-circle-check" /> Verified Credential Badge
                 </div>
-                <h4 style={{ margin: '0 0 6px', color: 'var(--black)', fontSize: '18px', fontWeight: 700, fontFamily: 'Georgia, serif' }}>
+                <h4 style={{ margin: '0 0 6px', color: 'var(--deep-black)', fontSize: '18px', fontWeight: 700, fontFamily: 'Georgia, serif' }}>
                   {modal.title}
                 </h4>
                 <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '14px' }}>
@@ -747,9 +694,8 @@ export default function SkillsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [modalState, setModalState] = useState<ModalState | null>(null)
-  const [viewMode, setViewMode] = useState<'certificates' | 'skills'>('certificates')
 
-  // Filter certificates based on search query and category
+  // Filtered certificates
   const filteredCerts = useMemo(() => {
     return certificates.filter((c) => {
       const matchesCategory = selectedCategory === 'all' || c.categoryId === selectedCategory
@@ -772,68 +718,169 @@ export default function SkillsPage() {
     return certificates.filter((c) => c.categoryId === catId).length
   }, [])
 
+  // Grouped certificates by category for organized section presentation
+  const groupedCategories = useMemo(() => {
+    const activeCats = categories.filter((cat) => cat.id !== 'all')
+    return activeCats
+      .map((cat) => {
+        const certs = filteredCerts.filter((c) => c.categoryId === cat.id)
+        return { ...cat, certs }
+      })
+      .filter((group) => group.certs.length > 0)
+  }, [filteredCerts])
+
   return (
     <PageLayout>
-      {/* ── Standard Light Page Header (Matches About, Resume, Work, etc.) ── */}
-      <div className="page-header">
-        <div className="section-badge" style={{ marginBottom: 16 }}>
-          <i className="fa-solid fa-certificate"></i> Verified Credentials &amp; Toolkit
-        </div>
-        <h1>Skills &amp; Certificates</h1>
-        <p>
-          An official showcase of my technical proficiencies, university coursework,
-          and industry certifications from MongoDB, IBM, Coursera, LeetCode, and HackerRank.
-        </p>
+      {/* ── Page Header with plenty of top padding to never collide with fixed navbar ── */}
+      <section
+        style={{
+          paddingTop: '160px',
+          paddingBottom: '40px',
+          backgroundColor: 'var(--warm-ivory)',
+          textAlign: 'center',
+          borderBottom: '1px solid var(--gray-light)',
+        }}
+      >
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+          {/* Section Badge */}
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '6px 18px',
+              borderRadius: '100px',
+              backgroundColor: 'rgba(138, 93, 60, 0.1)',
+              color: 'var(--warm-brown)',
+              fontSize: '13px',
+              fontWeight: 600,
+              marginBottom: '20px',
+              border: '1px solid rgba(138, 93, 60, 0.2)',
+            }}
+          >
+            <i className="fa-solid fa-certificate" /> Verified Credentials &amp; Toolkit
+          </div>
 
-        {/* Quick Metrics Strip */}
-        <div
-          style={{
-            display: 'inline-flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '32px',
-            marginTop: '36px',
-            padding: '16px 40px',
-            borderRadius: '100px',
-            backgroundColor: 'var(--white)',
-            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)',
-            border: '1px solid rgba(0, 0, 0, 0.04)',
-          }}
-        >
-          <div style={{ textAlign: 'center' }}>
-            <span style={{ fontSize: '28px', fontWeight: 700, color: 'var(--primary-blue)', fontFamily: 'Georgia, serif', lineHeight: 1 }}>
-              23+
-            </span>
-            <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: 4 }}>
-              Certifications
-            </div>
-          </div>
-          <div style={{ width: '1px', height: '28px', backgroundColor: 'var(--gray-light)' }} />
-          <div style={{ textAlign: 'center' }}>
-            <span style={{ fontSize: '28px', fontWeight: 700, color: '#059669', fontFamily: 'Georgia, serif', lineHeight: 1 }}>
-              8+
-            </span>
-            <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: 4 }}>
-              MongoDB Badges
-            </div>
-          </div>
-          <div style={{ width: '1px', height: '28px', backgroundColor: 'var(--gray-light)' }} />
-          <div style={{ textAlign: 'center' }}>
-            <span style={{ fontSize: '28px', fontWeight: 700, color: '#D97706', fontFamily: 'Georgia, serif', lineHeight: 1 }}>
-              100%
-            </span>
-            <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: 4 }}>
-              Verifiable
-            </div>
+          <h1
+            style={{
+              fontSize: 'clamp(36px, 5vw, 54px)',
+              fontWeight: 700,
+              color: 'var(--deep-black)',
+              margin: '0 0 16px',
+              fontFamily: 'Georgia, serif',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            Skills &amp; Certificates
+          </h1>
+          <p
+            style={{
+              fontSize: '17px',
+              color: 'var(--text-muted)',
+              maxWidth: '680px',
+              margin: '0 auto 36px',
+              lineHeight: 1.6,
+            }}
+          >
+            An official showcase of technical proficiencies, university coursework, and industry
+            certifications from MongoDB, IBM, Coursera, LeetCode, and HackerRank.
+          </p>
+
+          {/* ── Top 4 Domain Summary Cards (Frontend, Backend, Database, Tools & Others) ── */}
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+              gap: '20px',
+              textAlign: 'left',
+              marginTop: '20px',
+            }}
+          >
+            {topDomains.map((domain, i) => (
+              <div
+                key={i}
+                style={{
+                  backgroundColor: 'var(--soft-cream)',
+                  borderRadius: '20px',
+                  border: '1px solid var(--gray-light)',
+                  padding: '24px 22px',
+                  boxShadow: '0 6px 20px rgba(14, 14, 16, 0.04)',
+                  transition: 'all 0.25s ease',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '16px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-4px)'
+                  e.currentTarget.style.borderColor = 'var(--warm-brown)'
+                  e.currentTarget.style.boxShadow = '0 12px 28px rgba(138, 93, 60, 0.12)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.borderColor = 'var(--gray-light)'
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(14, 14, 16, 0.04)'
+                }}
+              >
+                {/* Header with Icon */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div
+                    style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '12px',
+                      backgroundColor: 'rgba(138, 93, 60, 0.1)',
+                      border: '1px solid rgba(138, 93, 60, 0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'var(--warm-brown)',
+                      fontSize: '18px',
+                    }}
+                  >
+                    <i className={domain.icon} />
+                  </div>
+                  <h3
+                    style={{
+                      margin: 0,
+                      fontSize: '18px',
+                      fontWeight: 700,
+                      color: 'var(--deep-black)',
+                      fontFamily: 'Georgia, serif',
+                    }}
+                  >
+                    {domain.title}
+                  </h3>
+                </div>
+
+                {/* Skill Pills */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {domain.skills.map((skill, si) => (
+                    <span
+                      key={si}
+                      style={{
+                        padding: '6px 14px',
+                        borderRadius: '100px',
+                        backgroundColor: 'var(--warm-ivory)',
+                        border: '1px solid var(--gray-light)',
+                        color: 'var(--deep-black)',
+                        fontSize: '13px',
+                        fontWeight: 500,
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* ── Main Content Container (Light Theme) ── */}
-      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '60px 24px 100px' }}>
+      {/* ── Main Content Container ── */}
+      <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '48px 24px 100px' }}>
         
-        {/* ── View Switcher & Live Search Row ── */}
+        {/* ── Filter Bar: Category Chips + Search Bar ── */}
         <div
           style={{
             display: 'flex',
@@ -841,628 +888,472 @@ export default function SkillsPage() {
             justifyContent: 'space-between',
             flexWrap: 'wrap',
             gap: '20px',
-            marginBottom: '36px',
+            marginBottom: '32px',
             paddingBottom: '24px',
             borderBottom: '1px solid var(--gray-light)',
           }}
         >
-          {/* Mode Switcher */}
+          {/* Category Filter Chips */}
           <div
             style={{
-              display: 'inline-flex',
-              padding: '6px',
-              borderRadius: '100px',
-              backgroundColor: 'var(--white)',
-              border: '1px solid var(--gray-light)',
-              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.03)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              flexWrap: 'wrap',
+              flex: 1,
             }}
           >
-            <button
-              onClick={() => setViewMode('certificates')}
-              style={{
-                padding: '10px 24px',
-                borderRadius: '100px',
-                border: 'none',
-                cursor: 'pointer',
-                fontSize: '14px',
-                fontWeight: 600,
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                backgroundColor: viewMode === 'certificates' ? 'var(--black)' : 'transparent',
-                color: viewMode === 'certificates' ? 'var(--white)' : 'var(--text-muted)',
-                transition: 'all 0.2s ease',
-              }}
-            >
-              <i className="fa-solid fa-stamp" />
-              Certificates &amp; Badges ({certificates.length})
-            </button>
-            <button
-              onClick={() => setViewMode('skills')}
-              style={{
-                padding: '10px 24px',
-                borderRadius: '100px',
-                border: 'none',
-                cursor: 'pointer',
-                fontSize: '14px',
-                fontWeight: 600,
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                backgroundColor: viewMode === 'skills' ? 'var(--black)' : 'transparent',
-                color: viewMode === 'skills' ? 'var(--white)' : 'var(--text-muted)',
-                transition: 'all 0.2s ease',
-              }}
-            >
-              <i className="fa-solid fa-layer-group" />
-              Core Tech Stack
-            </button>
+            {categories.map((cat) => {
+              const count = getCategoryCount(cat.id)
+              const isSelected = selectedCategory === cat.id
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  style={{
+                    padding: '8px 16px',
+                    borderRadius: '100px',
+                    border: isSelected
+                      ? '1px solid var(--deep-black)'
+                      : '1px solid var(--gray-light)',
+                    backgroundColor: isSelected ? 'var(--deep-black)' : 'var(--soft-cream)',
+                    color: isSelected ? 'var(--soft-cream)' : 'var(--deep-black)',
+                    cursor: 'pointer',
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    boxShadow: isSelected
+                      ? '0 4px 14px rgba(14, 14, 16, 0.2)'
+                      : '0 2px 6px rgba(14, 14, 16, 0.03)',
+                    transition: 'all 0.2s ease',
+                  }}
+                >
+                  <i
+                    className={cat.icon}
+                    style={{
+                      color: isSelected ? 'var(--soft-cream)' : 'var(--warm-brown)',
+                      fontSize: '12px',
+                    }}
+                  />
+                  <span>{cat.name}</span>
+                  <span
+                    style={{
+                      padding: '2px 8px',
+                      borderRadius: '100px',
+                      fontSize: '11px',
+                      backgroundColor: isSelected ? 'rgba(255, 251, 242, 0.2)' : 'rgba(14, 14, 16, 0.06)',
+                      color: isSelected ? 'var(--soft-cream)' : 'var(--text-muted)',
+                      fontWeight: 700,
+                    }}
+                  >
+                    {count}
+                  </span>
+                </button>
+              )
+            })}
           </div>
 
           {/* Search Box */}
-          {viewMode === 'certificates' && (
-            <div style={{ position: 'relative', width: '100%', maxWidth: '360px' }}>
-              <i
-                className="fa-solid fa-magnifying-glass"
+          <div style={{ position: 'relative', width: '100%', maxWidth: '320px' }}>
+            <i
+              className="fa-solid fa-magnifying-glass"
+              style={{
+                position: 'absolute',
+                left: '16px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                color: 'var(--text-muted)',
+                fontSize: '13px',
+              }}
+            />
+            <input
+              type="text"
+              placeholder="Search certs (e.g. MongoDB, Python)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '10px 16px 10px 40px',
+                borderRadius: '100px',
+                backgroundColor: 'var(--soft-cream)',
+                border: '1px solid var(--gray-light)',
+                color: 'var(--deep-black)',
+                fontSize: '13px',
+                outline: 'none',
+                boxSizing: 'border-box',
+                boxShadow: '0 2px 8px rgba(14, 14, 16, 0.03)',
+                transition: 'border-color 0.2s',
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = 'var(--warm-brown)'
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = 'var(--gray-light)'
+              }}
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
                 style={{
                   position: 'absolute',
-                  left: '18px',
+                  right: '12px',
                   top: '50%',
                   transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
                   color: 'var(--text-muted)',
-                  fontSize: '14px',
-                }}
-              />
-              <input
-                type="text"
-                placeholder="Search certs (e.g. MongoDB, Python, LeetCode)..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '12px 18px 12px 44px',
-                  borderRadius: '100px',
-                  backgroundColor: 'var(--white)',
-                  border: '1px solid var(--gray-light)',
-                  color: 'var(--black)',
-                  fontSize: '14px',
-                  outline: 'none',
-                  boxSizing: 'border-box',
-                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.02)',
-                  transition: 'border-color 0.2s',
-                }}
-                onFocus={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--primary-blue)'
-                }}
-                onBlur={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--gray-light)'
-                }}
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  style={{
-                    position: 'absolute',
-                    right: '14px',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    background: 'none',
-                    border: 'none',
-                    color: 'var(--text-muted)',
-                    cursor: 'pointer',
-                    fontSize: '12px',
-                    padding: '4px',
-                  }}
-                >
-                  ✕
-                </button>
-              )}
-            </div>
-          )}
-        </div>
-
-        {/* ── Mode 1: CERTIFICATES & BADGES ── */}
-        {viewMode === 'certificates' && (
-          <div>
-            {/* Category Filter Chips */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                flexWrap: 'wrap',
-                marginBottom: '32px',
-              }}
-            >
-              {categories.map((cat) => {
-                const count = getCategoryCount(cat.id)
-                const isSelected = selectedCategory === cat.id
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => setSelectedCategory(cat.id)}
-                    style={{
-                      padding: '8px 18px',
-                      borderRadius: '100px',
-                      border: isSelected
-                        ? '1px solid var(--primary-blue)'
-                        : '1px solid var(--gray-light)',
-                      backgroundColor: isSelected ? 'var(--primary-blue)' : 'var(--white)',
-                      color: isSelected ? 'var(--white)' : 'var(--text-dark)',
-                      cursor: 'pointer',
-                      fontSize: '13px',
-                      fontWeight: 600,
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      boxShadow: isSelected
-                        ? '0 6px 18px rgba(33, 94, 253, 0.25)'
-                        : '0 2px 8px rgba(0, 0, 0, 0.02)',
-                      transition: 'all 0.2s ease',
-                    }}
-                  >
-                    <i
-                      className={cat.icon}
-                      style={{
-                        color: isSelected ? 'var(--white)' : cat.color,
-                        fontSize: '12px',
-                      }}
-                    />
-                    <span>{cat.name}</span>
-                    <span
-                      style={{
-                        padding: '2px 8px',
-                        borderRadius: '100px',
-                        fontSize: '11px',
-                        backgroundColor: isSelected ? 'rgba(255, 255, 255, 0.25)' : 'rgba(0, 0, 0, 0.06)',
-                        color: isSelected ? 'var(--white)' : 'var(--text-muted)',
-                        fontWeight: 700,
-                      }}
-                    >
-                      {count}
-                    </span>
-                  </button>
-                )
-              })}
-            </div>
-
-            {/* Filter Counter / Reset Bar */}
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                marginBottom: '28px',
-              }}
-            >
-              <p style={{ margin: 0, fontSize: '15px', color: 'var(--text-muted)' }}>
-                Showing <strong style={{ color: 'var(--black)' }}>{filteredCerts.length}</strong> verified{' '}
-                {filteredCerts.length === 1 ? 'credential' : 'credentials'}
-                {searchQuery && (
-                  <span>
-                    {' '}
-                    matching &ldquo;<span style={{ color: 'var(--primary-blue)', fontWeight: 600 }}>{searchQuery}</span>&rdquo;
-                  </span>
-                )}
-              </p>
-              {(selectedCategory !== 'all' || searchQuery) && (
-                <button
-                  onClick={() => {
-                    setSelectedCategory('all')
-                    setSearchQuery('')
-                  }}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    color: 'var(--primary-blue)',
-                    fontSize: '13px',
-                    fontWeight: 600,
-                    cursor: 'pointer',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                  }}
-                >
-                  <i className="fa-solid fa-rotate-left" style={{ fontSize: '11px' }} />
-                  Reset all filters
-                </button>
-              )}
-            </div>
-
-            {/* Empty State */}
-            {filteredCerts.length === 0 ? (
-              <div
-                style={{
-                  padding: '80px 24px',
-                  textAlign: 'center',
-                  backgroundColor: 'var(--white)',
-                  borderRadius: '24px',
-                  border: '1px dashed var(--gray-light)',
-                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.02)',
+                  cursor: 'pointer',
+                  fontSize: '12px',
+                  padding: '4px',
                 }}
               >
-                <i className="fa-solid fa-magnifying-glass" style={{ fontSize: '36px', color: 'var(--text-muted)', marginBottom: '16px' }} />
-                <h3 style={{ margin: '0 0 8px', color: 'var(--black)', fontSize: '20px', fontFamily: 'Georgia, serif' }}>
-                  No credentials found
-                </h3>
-                <p style={{ margin: 0, color: 'var(--text-muted)', fontSize: '15px' }}>
-                  Try adjusting your search query or selecting a different category.
-                </p>
-              </div>
-            ) : (
-              /* Certificate Cards Grid */
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-                  gap: '24px',
-                }}
-              >
-                {filteredCerts.map((cert) => {
-                  const hasBadge = !!cert.badge
-                  const hasPdf = !!cert.pdf || (cert.pdfs && cert.pdfs.length > 0)
-
-                  return (
-                    <div
-                      key={cert.id}
-                      style={{
-                        backgroundColor: 'var(--white)',
-                        borderRadius: '24px',
-                        border: '1px solid rgba(0, 0, 0, 0.06)',
-                        padding: '28px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-between',
-                        gap: '20px',
-                        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04)',
-                        transition: 'all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = 'translateY(-6px)'
-                        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.08)'
-                        e.currentTarget.style.borderColor = 'rgba(33, 94, 253, 0.3)'
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = 'translateY(0)'
-                        e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.04)'
-                        e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.06)'
-                      }}
-                    >
-                      {/* Top Row: Thumbnail/Icon + Title & Issuer */}
-                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                        {hasBadge ? (
-                          <div
-                            onClick={() =>
-                              setModalState({
-                                type: 'badge',
-                                title: cert.title,
-                                issuer: cert.issuer,
-                                color: cert.color,
-                                badgeUrl: cert.badge,
-                              })
-                            }
-                            title="Click to inspect badge"
-                            style={{
-                              width: '64px',
-                              height: '64px',
-                              borderRadius: '16px',
-                              backgroundColor: '#FFFFFF',
-                              border: '1px solid rgba(0, 0, 0, 0.08)',
-                              boxShadow: '0 4px 14px rgba(0, 0, 0, 0.04)',
-                              padding: '6px',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              cursor: 'pointer',
-                              flexShrink: 0,
-                              transition: 'transform 0.2s ease',
-                            }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.transform = 'scale(1.06)'
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.transform = 'scale(1)'
-                            }}
-                          >
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                              src={cert.badge}
-                              alt={cert.title}
-                              style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'contain',
-                              }}
-                            />
-                          </div>
-                        ) : (
-                          <div
-                            style={{
-                              width: '64px',
-                              height: '64px',
-                              borderRadius: '16px',
-                              backgroundColor: 'rgba(33, 94, 253, 0.08)',
-                              border: '1px solid rgba(33, 94, 253, 0.15)',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              flexShrink: 0,
-                            }}
-                          >
-                            <i className={cert.icon} style={{ fontSize: '26px', color: 'var(--primary-blue)' }} />
-                          </div>
-                        )}
-
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <div
-                            style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              gap: '8px',
-                              marginBottom: '6px',
-                            }}
-                          >
-                            <span
-                              style={{
-                                fontSize: '11px',
-                                fontWeight: 700,
-                                textTransform: 'uppercase',
-                                letterSpacing: '0.06em',
-                                color: 'var(--primary-blue)',
-                              }}
-                            >
-                              {cert.issuer}
-                            </span>
-                            <span style={{ color: 'var(--gray-light)', fontSize: '10px' }}>•</span>
-                            <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>
-                              {cert.year}
-                            </span>
-                          </div>
-
-                          <h3
-                            style={{
-                              margin: 0,
-                              fontSize: '17px',
-                              fontWeight: 700,
-                              color: 'var(--black)',
-                              lineHeight: 1.35,
-                              fontFamily: 'Georgia, serif',
-                              letterSpacing: '-0.02em',
-                            }}
-                          >
-                            {cert.title}
-                          </h3>
-                        </div>
-                      </div>
-
-                      {/* Skills Tags */}
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                        {cert.skills.map((skill, si) => (
-                          <span
-                            key={si}
-                            style={{
-                              fontSize: '12px',
-                              fontWeight: 500,
-                              padding: '4px 10px',
-                              borderRadius: '6px',
-                              backgroundColor: 'rgba(0, 0, 0, 0.03)',
-                              border: '1px solid rgba(0, 0, 0, 0.04)',
-                              color: 'var(--text-dark)',
-                            }}
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-
-                      {/* Action Buttons */}
-                      <div
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '10px',
-                          paddingTop: '18px',
-                          borderTop: '1px solid rgba(0, 0, 0, 0.05)',
-                        }}
-                      >
-                        {hasPdf && (
-                          <button
-                            onClick={() =>
-                              setModalState({
-                                type: 'pdf',
-                                title: cert.title,
-                                issuer: cert.issuer,
-                                color: cert.color,
-                                pdfUrl: cert.pdf,
-                                pdfs: cert.pdfs,
-                              })
-                            }
-                            className="btn btn-dark"
-                            style={{
-                              flex: 1,
-                              padding: '10px 16px',
-                              fontSize: '13px',
-                              borderRadius: '100px',
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              gap: '6px',
-                            }}
-                          >
-                            <i className="fa-solid fa-file-pdf" style={{ color: '#EF4444' }} />
-                            {cert.pdfs ? `View Certs (${cert.pdfs.length})` : 'View Certificate'}
-                          </button>
-                        )}
-
-                        {hasBadge && (
-                          <button
-                            onClick={() =>
-                              setModalState({
-                                type: 'badge',
-                                title: cert.title,
-                                issuer: cert.issuer,
-                                color: cert.color,
-                                badgeUrl: cert.badge,
-                              })
-                            }
-                            className="btn btn-primary"
-                            style={{
-                              padding: '10px 16px',
-                              fontSize: '13px',
-                              borderRadius: '100px',
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              gap: '6px',
-                            }}
-                          >
-                            <i className="fa-solid fa-award" style={{ color: '#D97706' }} />
-                            Badge
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
+                ✕
+              </button>
             )}
           </div>
-        )}
+        </div>
 
-        {/* ── Mode 2: CORE TECH STACK ── */}
-        {viewMode === 'skills' && (
-          <div>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                gap: '24px',
+        {/* Empty State */}
+        {filteredCerts.length === 0 ? (
+          <div
+            style={{
+              padding: '80px 24px',
+              textAlign: 'center',
+              backgroundColor: 'var(--soft-cream)',
+              borderRadius: '24px',
+              border: '1px dashed var(--gray-light)',
+              boxShadow: '0 8px 24px rgba(14, 14, 16, 0.02)',
+            }}
+          >
+            <i className="fa-solid fa-magnifying-glass" style={{ fontSize: '36px', color: 'var(--warm-brown)', marginBottom: '16px' }} />
+            <h3 style={{ margin: '0 0 8px', color: 'var(--deep-black)', fontSize: '20px', fontFamily: 'Georgia, serif' }}>
+              No credentials found
+            </h3>
+            <p style={{ margin: '0 0 20px', color: 'var(--text-muted)', fontSize: '15px' }}>
+              Try adjusting your search query or selecting a different category.
+            </p>
+            <button
+              onClick={() => {
+                setSelectedCategory('all')
+                setSearchQuery('')
               }}
+              className="btn btn-dark"
+              style={{ padding: '10px 22px', fontSize: '13px', borderRadius: '100px' }}
             >
-              {technicalSkills.map((domain, di) => (
+              Reset Filters
+            </button>
+          </div>
+        ) : (
+          /* ── Categorized Sections (Matches user layout, styled in Warm Palette) ── */
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+            {groupedCategories.map((group) => (
+              <div key={group.id} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                
+                {/* Category Section Header */}
                 <div
-                  key={di}
                   style={{
-                    backgroundColor: 'var(--white)',
-                    borderRadius: '24px',
-                    border: '1px solid rgba(0, 0, 0, 0.06)',
-                    padding: '32px 28px',
-                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04)',
                     display: 'flex',
-                    flexDirection: 'column',
-                    gap: '28px',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    paddingBottom: '12px',
+                    borderBottom: '1px solid var(--gray-light)',
                   }}
                 >
-                  {/* Domain Header */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <div
                       style={{
-                        width: '48px',
-                        height: '48px',
-                        borderRadius: '14px',
-                        backgroundColor: 'rgba(33, 94, 253, 0.08)',
-                        border: '1px solid rgba(33, 94, 253, 0.15)',
+                        width: '36px',
+                        height: '36px',
+                        borderRadius: '10px',
+                        backgroundColor: 'rgba(138, 93, 60, 0.1)',
+                        border: '1px solid rgba(138, 93, 60, 0.25)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        flexShrink: 0,
+                        color: 'var(--warm-brown)',
+                        fontSize: '16px',
                       }}
                     >
-                      <i className={domain.icon} style={{ fontSize: '20px', color: 'var(--primary-blue)' }} />
+                      <i className={group.icon} />
                     </div>
-                    <div>
-                      <h3 style={{ margin: 0, fontSize: '18px', color: 'var(--black)', fontWeight: 700, fontFamily: 'Georgia, serif' }}>
-                        {domain.category}
-                      </h3>
-                      <p style={{ margin: '2px 0 0', fontSize: '13px', color: 'var(--text-muted)' }}>
-                        Production Tested
-                      </p>
-                    </div>
+                    <h2
+                      style={{
+                        margin: 0,
+                        fontSize: '22px',
+                        fontWeight: 700,
+                        color: 'var(--deep-black)',
+                        fontFamily: 'Georgia, serif',
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      {group.name}
+                    </h2>
                   </div>
 
-                  {/* Skills Progress List */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                    {domain.skills.map((skill, si) => (
-                      <div key={si}>
+                  <span
+                    style={{
+                      padding: '4px 12px',
+                      borderRadius: '100px',
+                      backgroundColor: 'rgba(138, 93, 60, 0.1)',
+                      color: 'var(--warm-brown)',
+                      fontSize: '12px',
+                      fontWeight: 700,
+                    }}
+                  >
+                    {group.certs.length} {group.certs.length === 1 ? 'cert' : 'certs'}
+                  </span>
+                </div>
+
+                {/* Cards Grid for this category */}
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+                    gap: '20px',
+                  }}
+                >
+                  {group.certs.map((cert) => {
+                    const hasBadge = !!cert.badge
+                    const hasPdf = !!cert.pdf || (cert.pdfs && cert.pdfs.length > 0)
+
+                    return (
+                      <div
+                        key={cert.id}
+                        style={{
+                          backgroundColor: 'var(--soft-cream)',
+                          borderRadius: '20px',
+                          border: '1px solid var(--gray-light)',
+                          padding: '24px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'space-between',
+                          gap: '18px',
+                          boxShadow: '0 6px 18px rgba(14, 14, 16, 0.03)',
+                          transition: 'all 0.25s ease',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = 'translateY(-4px)'
+                          e.currentTarget.style.boxShadow = '0 14px 30px rgba(138, 93, 60, 0.12)'
+                          e.currentTarget.style.borderColor = 'var(--warm-brown)'
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = 'translateY(0)'
+                          e.currentTarget.style.boxShadow = '0 6px 18px rgba(14, 14, 16, 0.03)'
+                          e.currentTarget.style.borderColor = 'var(--gray-light)'
+                        }}
+                      >
+                        {/* Top: Icon/Badge + Title + Issuer */}
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
+                          {hasBadge ? (
+                            <div
+                              onClick={() =>
+                                setModalState({
+                                  type: 'badge',
+                                  title: cert.title,
+                                  issuer: cert.issuer,
+                                  color: cert.color,
+                                  badgeUrl: cert.badge,
+                                })
+                              }
+                              title="Click to inspect credential badge"
+                              style={{
+                                width: '56px',
+                                height: '56px',
+                                borderRadius: '14px',
+                                backgroundColor: '#FFFFFF',
+                                border: '1px solid var(--gray-light)',
+                                boxShadow: '0 2px 8px rgba(14, 14, 16, 0.04)',
+                                padding: '6px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                cursor: 'pointer',
+                                flexShrink: 0,
+                                transition: 'transform 0.2s ease',
+                              }}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.transform = 'scale(1.06)'
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.transform = 'scale(1)'
+                              }}
+                            >
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
+                                src={cert.badge}
+                                alt={cert.title}
+                                style={{
+                                  width: '100%',
+                                  height: '100%',
+                                  objectFit: 'contain',
+                                }}
+                              />
+                            </div>
+                          ) : (
+                            <div
+                              style={{
+                                width: '56px',
+                                height: '56px',
+                                borderRadius: '14px',
+                                backgroundColor: 'rgba(138, 93, 60, 0.08)',
+                                border: '1px solid rgba(138, 93, 60, 0.2)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                flexShrink: 0,
+                              }}
+                            >
+                              <i className={cert.icon} style={{ fontSize: '22px', color: 'var(--warm-brown)' }} />
+                            </div>
+                          )}
+
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div
+                              style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '6px',
+                                marginBottom: '4px',
+                              }}
+                            >
+                              <span
+                                style={{
+                                  fontSize: '11px',
+                                  fontWeight: 700,
+                                  textTransform: 'uppercase',
+                                  letterSpacing: '0.05em',
+                                  color: 'var(--warm-brown)',
+                                }}
+                              >
+                                {cert.issuer}
+                              </span>
+                              <span style={{ color: 'var(--gray-light)', fontSize: '10px' }}>•</span>
+                              <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>
+                                {cert.year}
+                              </span>
+                            </div>
+
+                            <h3
+                              style={{
+                                margin: 0,
+                                fontSize: '16px',
+                                fontWeight: 700,
+                                color: 'var(--deep-black)',
+                                lineHeight: 1.35,
+                                fontFamily: 'Georgia, serif',
+                              }}
+                            >
+                              {cert.title}
+                            </h3>
+                          </div>
+                        </div>
+
+                        {/* Skill Tags */}
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                          {cert.skills.map((skill, si) => (
+                            <span
+                              key={si}
+                              style={{
+                                fontSize: '12px',
+                                fontWeight: 500,
+                                padding: '4px 10px',
+                                borderRadius: '6px',
+                                backgroundColor: 'var(--warm-ivory)',
+                                border: '1px solid var(--gray-light)',
+                                color: 'var(--deep-black)',
+                              }}
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+
+                        {/* Action Buttons */}
                         <div
                           style={{
                             display: 'flex',
-                            justifyContent: 'space-between',
                             alignItems: 'center',
-                            marginBottom: '8px',
+                            gap: '10px',
+                            paddingTop: '16px',
+                            borderTop: '1px solid var(--gray-light)',
                           }}
                         >
-                          <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-dark)' }}>
-                            {skill.name}
-                          </span>
-                          <span
-                            style={{
-                              fontSize: '11px',
-                              fontWeight: 700,
-                              color: 'var(--primary-blue)',
-                              padding: '2px 10px',
-                              borderRadius: '100px',
-                              backgroundColor: 'rgba(33, 94, 253, 0.08)',
-                            }}
-                          >
-                            {skill.level}
-                          </span>
-                        </div>
-                        <div
-                          style={{
-                            width: '100%',
-                            height: '7px',
-                            backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                            borderRadius: '100px',
-                            overflow: 'hidden',
-                          }}
-                        >
-                          <div
-                            style={{
-                              width: `${skill.percent}%`,
-                              height: '100%',
-                              borderRadius: '100px',
-                              backgroundColor: 'var(--primary-blue)',
-                            }}
-                          />
+                          {hasPdf && (
+                            <button
+                              onClick={() =>
+                                setModalState({
+                                  type: 'pdf',
+                                  title: cert.title,
+                                  issuer: cert.issuer,
+                                  color: cert.color,
+                                  pdfUrl: cert.pdf,
+                                  pdfs: cert.pdfs,
+                                })
+                              }
+                              className="btn btn-dark"
+                              style={{
+                                flex: 1,
+                                padding: '9px 14px',
+                                fontSize: '12px',
+                                borderRadius: '100px',
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                gap: '6px',
+                              }}
+                            >
+                              <i className="fa-solid fa-file-pdf" style={{ color: 'var(--warm-brown)' }} />
+                              {cert.pdfs ? `View Certs (${cert.pdfs.length})` : 'Certificate'}
+                            </button>
+                          )}
+
+                          {hasBadge && (
+                            <button
+                              onClick={() =>
+                                setModalState({
+                                  type: 'badge',
+                                  title: cert.title,
+                                  issuer: cert.issuer,
+                                  color: cert.color,
+                                  badgeUrl: cert.badge,
+                                })
+                              }
+                              style={{
+                                padding: '9px 16px',
+                                fontSize: '12px',
+                                fontWeight: 600,
+                                borderRadius: '100px',
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '6px',
+                                backgroundColor: 'rgba(138, 93, 60, 0.1)',
+                                color: 'var(--warm-brown)',
+                                border: '1px solid rgba(138, 93, 60, 0.25)',
+                                cursor: 'pointer',
+                                transition: 'all 0.2s',
+                              }}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.backgroundColor = 'var(--warm-brown)'
+                                e.currentTarget.style.color = 'var(--soft-cream)'
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.backgroundColor = 'rgba(138, 93, 60, 0.1)'
+                                e.currentTarget.style.color = 'var(--warm-brown)'
+                              }}
+                            >
+                              <i className="fa-solid fa-award" />
+                              Badge
+                            </button>
+                          )}
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    )
+                  })}
                 </div>
-              ))}
-            </div>
-
-            {/* Quick Link back to certificates */}
-            <div
-              style={{
-                marginTop: '48px',
-                padding: '32px 36px',
-                borderRadius: '24px',
-                backgroundColor: 'var(--blue-light)',
-                border: '1px solid rgba(33, 94, 253, 0.15)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                flexWrap: 'wrap',
-                gap: '20px',
-              }}
-            >
-              <div>
-                <h4 style={{ margin: '0 0 6px', color: 'var(--black)', fontSize: '18px', fontWeight: 700, fontFamily: 'Georgia, serif' }}>
-                  Ready to inspect credentials?
-                </h4>
-                <p style={{ margin: 0, color: 'var(--text-dark)', fontSize: '15px' }}>
-                  Explore 23+ individual course certificates and official badges with live PDF preview.
-                </p>
               </div>
-              <button
-                onClick={() => setViewMode('certificates')}
-                className="btn btn-dark"
-                style={{ padding: '12px 28px', fontSize: '14px', borderRadius: '100px' }}
-              >
-                Browse All Certificates <i className="fa-solid fa-arrow-right" />
-              </button>
-            </div>
+            ))}
           </div>
         )}
       </section>

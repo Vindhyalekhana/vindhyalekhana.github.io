@@ -22,14 +22,14 @@ export default function AwardsPage() {
         </div>
 
         <div className="award-card animate-up">
-          <i className="fa-solid fa-medal award-icon" style={{ color: '#60A5FA' }}></i>
+          <i className="fa-solid fa-medal award-icon" style={{ color: 'var(--warm-brown)' }}></i>
           <h3>Best Capstone Project</h3>
           <p className="timeline-subtitle">2024</p>
           <p style={{ fontSize: 14, color: 'var(--text-muted)' }}>Awarded by the university for the &apos;Safe Route Finder&apos; platform.</p>
         </div>
 
         <div className="award-card animate-up">
-          <i className="fa-solid fa-star award-icon" style={{ color: '#FBBF24' }}></i>
+          <i className="fa-solid fa-star award-icon" style={{ color: 'var(--warm-brown)' }}></i>
           <h3>Top Contributor - Open Source</h3>
           <p className="timeline-subtitle">2024</p>
           <p style={{ fontSize: 14, color: 'var(--text-muted)' }}>Recognized for 500+ commits to various developer community projects.</p>

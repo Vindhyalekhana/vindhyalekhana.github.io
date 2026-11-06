@@ -112,9 +112,13 @@ export default function HomePage() {
               </div>
             </div>
             <div className="about-right">
-              <h2>I am a passionate Full Stack Developer focused on creating modern web applications, automation systems, and data-driven solutions.</h2>
-              <p style={{ marginBottom: 32, color: 'var(--text-muted)' }}>My interests include software engineering, cybersecurity, AI-powered systems, and building products that solve real-world problems.</p>
-              <Link href="/contact" className="btn btn-dark">Download Resume <i className="fa-solid fa-download"></i></Link>
+              <h2>
+                I am <span style={{ color: 'var(--warm-brown)' }}>Vindhya Lekhana</span>, a Computer Science and Engineering undergraduate at Woxsen University, specializing in Blockchain, IoT, and Cybersecurity.
+              </h2>
+              <p style={{ marginBottom: 32, color: 'var(--text-muted)' }}>
+                I am interested in software engineering, full-stack development, cybersecurity, and emerging technologies. I enjoy transforming ideas into practical software solutions through problem-solving, thoughtful architecture, and clean, maintainable code.
+              </p>
+              <Link href="/resume" className="btn btn-dark">View My Resume <i className="fa-solid fa-arrow-right"></i></Link>
               <div className="stats-grid">
                 <div className="stat-box">
                   <div className="stat-info">
@@ -284,10 +288,6 @@ export default function HomePage() {
               <a href="https://www.linkedin.com/in/vindhyalekhana/" target="_blank" rel="noopener noreferrer" className="cta-link-card">
                 <i className="fa-brands fa-linkedin"></i>
                 <span>LinkedIn</span>
-              </a>
-              <a href="https://instagram.com/soul.scripted.22" target="_blank" rel="noopener noreferrer" className="cta-link-card">
-                <i className="fa-brands fa-instagram"></i>
-                <span>Instagram</span>
               </a>
             </div>
           </div>
